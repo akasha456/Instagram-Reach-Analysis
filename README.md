@@ -49,15 +49,15 @@ pip install -r requirements.txt
 
 ```mermaid
 flowchart TD
-    A[Load Instagram Dataset] --> B[Preprocess Data with MinMaxScaler]
-    B --> C[Split for Regression and Classification]
-    C --> D[Train Regression Model (Linear)]
-    C --> E[Train Classifiers (DT, RF, LR)]
-    B --> F[Cluster with K-Means and Agglomerative]
-    D --> G[Evaluate with MAE, R²]
-    E --> H[Evaluate with Accuracy, F1, CM]
-    F --> I[Evaluate with Silhouette Score]
-    G --> J[Visualize Results]
+    A["Load Instagram Dataset"] --> B["Preprocess Data with MinMaxScaler"]
+    B --> C["Split for Regression and Classification"]
+    C --> D["Train Regression Model - PassiveAggressiveRegressor"]
+    C --> E["Train Classifiers - Random Forest, Logistic Regression"]
+    B --> F["Cluster using K-Means and Agglomerative"]
+    D --> G["Evaluate Regression - MAE, R²"]
+    E --> H["Evaluate Classification - Accuracy, F1, Confusion Matrix"]
+    F --> I["Evaluate Clustering - Silhouette Score"]
+    G --> J["Visualize Results"]
     H --> J
     I --> J
 ```
